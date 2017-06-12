@@ -1,0 +1,14 @@
+extends ../components/layout-default/layout-default
+//- include data.js
+include ../components/header/header
+include ../components/content/index/main
+include ../components/footer/footer
+
+block head
+	- var pageTitle = 'Такси Шереметьево';
+	- var pageDescription = 'Такси в аэропорт Шереметьево';
+	- var pageKeywords = 'такси шереметьево, такси в аэропорт шереметьево, такси шереметьево цена, такси шереметьево фиксированная цена, такси шереметьево дешево, такси шереметьево  москва, такси шереметьево город';
+block content
+	+header
+	+main
+	+footer

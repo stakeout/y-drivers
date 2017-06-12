@@ -1,0 +1,17 @@
+include ../../../node_modules/bemto.jade/bemto
+include ../../../node_modules/jade-injected/jade-injected
+include ../page/page
+//- include ../scripts/scripts
+
+doctype html
+html(lang='ru' class='no-js')
+	include ../head/head
+	+page
+		|%=symbols=%
+		block content
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+		
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
+
