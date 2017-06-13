@@ -1,3 +1,15 @@
+include ../../promo/promo
+include ../../conditions/conditions
+include ../../service/service
+include ../../statistics/statistics
+include ../../recruitment-info/recruitment-info
+include ../../questions/questions
 mixin main()
 	+b.MAIN.page-content
 		+e.inner
+			+promo
+			+conditions
+			+service
+			+statistics
+			+recruitment-info
+			+questions

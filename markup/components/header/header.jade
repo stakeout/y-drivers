@@ -1,4 +1,9 @@
+include ../logo/logo
+include ../navigation/navigation
+include ../phone/phone
 mixin header(data)
 	+b.HEADER(class='page-header')
-		+e.inner
-			p header
+		+e.inner.center
+			+logo
+			+navigation
+			+phone

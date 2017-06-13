@@ -1,0 +1,9 @@
+mixin order-form(data)
+	+b.FORM.order-form(method='POST' action='#')
+		+e.FIELDSET.form-group
+			label(for='name') Имя Фамилия
+			input(type='text' name='name' id='name')
+		+e.FIELDSET.form-group
+			label(for='phone') Номер телефона
+			input(type='tel' name='phone' id='phone')
+		+e.BUTTON.submit(type='submit') Подключиться
