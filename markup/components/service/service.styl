@@ -1,1 +1,38 @@
-
+.service
+	padding-top 80px
+	&__title
+		margin-bottom 80px
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+	&__item
+		flex-basis 300px
+		padding-top 100px
+		text-align center
+		b
+			display block
+			margin-bottom 20px
+			color $c_black
+			font-size 18px
+			font-weight 400
+			line-height 21px
+		p
+			color $c_black
+			font-size 14px
+			font-weight 300
+			line-height 21px
+		&_connection,
+		&_work,
+		&_programm
+			background-repeat no-repeat
+			background-size 60px
+			background-position center top
+		&_connection
+			background-image url(%=static=%minified-svg/2-1.svg)
+		&_work
+			background-image url(%=static=%minified-svg/2-2.svg)
+		&_programm
+			background-image url(%=static=%minified-svg/2-3.svg)

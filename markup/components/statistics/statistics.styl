@@ -1,1 +1,60 @@
-
+.statistics
+	padding-top 80px
+	&__title
+		margin-bottom 80px
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-wrap wrap
+		justify-content:space-between;
+	&__item
+		flex-basis 215px
+		text-align center
+	&__info-wrap
+		padding 50px 25px
+		margin-bottom 60px
+		background-color $c_orange
+		background-image linear-gradient(-45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.25) 100%)
+		border-radius 5px
+		box-shadow 0 3px 6px rgba(0, 0, 0, 0.25)
+		span
+			display block
+			margin-bottom 30px
+			color #ef5350
+			font-size 41px
+			font-weight 100
+			line-height 1
+		b
+			color $c_black
+			font-size 18px
+			font-weight 400
+			line-height 21px
+		p
+			padding-top 30px
+			color $c_black
+			font-size 14px
+			font-weight 100
+			line-height 21px
+	&__icon-wrap
+		padding-top 80px
+		p
+			color $c_black
+			font-size 14px
+			font-weight 300
+			line-height 21px
+		&_24-hour,
+		&_money,
+		&_y-taxi,
+		&_24-help
+			background-repeat no-repeat
+			background-size 60px
+			background-position center top
+		&_24-hour
+			background-image url(%=static=%minified-svg/3-1.svg)
+		&_money
+			background-image url(%=static=%minified-svg/3-2.svg)
+		&_y-taxi
+			background-image url(%=static=%minified-svg/3-3.svg)
+		&_24-help
+			background-image url(%=static=%minified-svg/3-4.svg)
