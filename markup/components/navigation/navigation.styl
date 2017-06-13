@@ -1,1 +1,22 @@
-
+.navigation
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	flew-wrap wrap
+	&__item
+		display block
+		margin-right 35px
+		padding 0 5px 5px
+		color $c_black
+		font-size 14px
+		line-height 1
+		font-weight 300
+		border-bottom 1px solid transparent
+		transition border-bottom .4s ease
+		&:last-child
+			margin-right 0
+		&:hover
+			border-bottom 1px solid $c_black
+		&:active
+			color rgba(0,0,0,.5)
+			border-bottom 1px solid rgba(0,0,0,.3)
