@@ -1,4 +1,4 @@
-.order-form
+.registration
 	margin-bottom 60px
 	&__inner
 		display -webkit-flex
@@ -10,18 +10,32 @@
 		position relative
 		margin-bottom 50px
 		label
-			display block
+			display inline-block
+			position absolute
+			left 15px
+			top 10px
 			color $c_white
 			font-size 18px
 			font-weight 400
 			line-height 1
 			text-align left
+			transition transform .4s ease
+			&.field-active
+				transform: translateY(-18px);
+				font-size: 13px;
+				color: $c_orange;
 		input
 			display block
 			width 420px
+			padding 10px 15px
+			color $c_white
+			font-size 18px
 			border none
 			border-bottom 2px solid $c_orange
 			background-color transparent
+			transition outline .4s ease
+			&.field-active
+				outline 1px solid rgba(255,255,255,.3)
 	&__submit
 		display block
 		width 200px
@@ -34,4 +48,5 @@
 		border-radius 5px
 		border none
 		box-shadow 0 3px 6px rgba(0, 0, 0, 0.25)
-		
+.requirements
+	display none	

@@ -1,10 +1,16 @@
 mixin order-form(data)
-	+b.FORM.order-form(method='POST' action='#')
+	+b.FORM.registration(method='POST' action='#')
 		+e.inner
 			+e.form-group
 				label(for='name') Имя Фамилия
 				input(type='text' name='name' id='name')
+				+b.UL.requirements
+					+e.LI.requirements__item Минимум 3 символа
+					+e.LI.requirements__item Допустимы только буквы и цифры
 			+e.form-group
 				label(for='phone') Номер телефона
 				input(type='tel' name='phone' id='phone')
+				+b.UL.requirements
+					+e.LI.requirements__item Минимум 3 символа
+					+e.LI.requirements__item Допустимы только буквы и цифры
 			+e.BUTTON.submit(type='submit') Подключиться
