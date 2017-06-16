@@ -24,11 +24,11 @@ CustomValidation.prototype = {
             let requirementElement = this.validityChecks[i].element;
             if (requirementElement) {
                 if (isInvalid) {
-                    requirementElement.classList.add('requirements__item--invalid');
-                    requirementElement.classList.remove('requirements__item--valid');
+                    requirementElement.classList.add('requirements__item_invalid');
+                    requirementElement.classList.remove('requirements__item_valid');
                 } else {
-                    requirementElement.classList.remove('requirements__item--invalid');
-                    requirementElement.classList.add('requirements__item--valid');
+                    requirementElement.classList.remove('requirements__item_invalid');
+                    requirementElement.classList.add('requirements__item_valid');
                 }
             }
 
@@ -42,63 +42,33 @@ let usernameValidityChecks = [
         isInvalid: function (input) {
             return input.value.length < 3;
         },
-        invalidityMessage: 'This input needs to be at least 3 characters long',
-        element: document.querySelector('label[for=\'username\'] li:nth-child(1)')
+        invalidityMessage: 'В этом поле необходимо ввести минимум 3 символа',
+        element: document.querySelector('#username + .requirements li:nth-child(1)')
     },
     {
         isInvalid: function (input) {
-            let illegalCharacters = input.value.match(/[^a-zA-Z0-9]/g);
+            let illegalCharacters = input.value.match(/[^а-яА-Яa-zA-Z]/);
             return illegalCharacters ? true : false;
         },
-        invalidityMessage: 'Only letters and numbers are allowed',
-        element: document.querySelector('label[for=\'username\'] li:nth-child(2)')
+        invalidityMessage: 'Пишем только буквы',
+        element: document.querySelector('#username + .requirements li:nth-child(2)')
     }
 ];
 
 let passwordValidityChecks = [
     {
         isInvalid: function (input) {
-            return input.value.length < 8 || input.value.length > 100;
+            return input.value.length < 16;
         },
         invalidityMessage: 'This input needs to be between 8 and 100 characters',
         element: document.querySelector('label[for=\'password\'] li:nth-child(1)')
     },
     {
         isInvalid: function (input) {
-            return !input.value.match(/[0-9]/g);
+            return !input.value.match(/\+7\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/g);
         },
-        invalidityMessage: 'At least one number are required',
-        element: document.querySelector('label[for=\'password\'] li:nth-child(2)')
-    },
-    {
-        isInvalid: function (input) {
-            return !input.value.match(/[a-z]/g);
-        },
-        invalidityMessage: 'At least one lowercase letter is required',
-        element: document.querySelector('label[for=\'password\'] li:nth-child(3)')
-    },
-    {
-        isInvalid: function (input) {
-            return !input.value.match(/[A-Z]/g);
-        },
-        invalidityMessage: 'At least one uppercase letter is required',
-        element: document.querySelector('label[for=\'password\'] li:nth-child(4)')
-    },
-    {
-        isInvalid: function (input) {
-            return !input.value.match(/[\!\@\#\$\%\^\&\*]/g);
-        },
-        invalidityMessage: 'You need one of the required special characters',
-        element: document.querySelector('label[for=\'password\'] li:nth-child(5)')
-    }
-];
-
-let passwordRepeatValidityChecks = [
-    {
-        isInvalid: function (input) {
-            return passwordRepeatInput.value !== passwordInput.value;
-        },
-        invalidityMessage: 'This password needs to match the first one'
+        invalidityMessage: 'Напишите номер в формате +7 (xxx) xxx-xx-xx',
+        element: document.querySelector('#phone + .requirements li:nth-child(1)')
     }
 ];
 
@@ -115,17 +85,14 @@ function checkInput(input) {
 }
 
 const usernameInput = document.querySelector('#username');
-const passwordInput = document.querySelector('#password');
-const passwordRepeatInput = document.querySelector('#password_repeat');
+const phoneInput = document.querySelector('#phone');
 
 usernameInput.CustomValidation = new CustomValidation();
 usernameInput.CustomValidation.validityChecks = usernameValidityChecks;
 
-passwordInput.CustomValidation = new CustomValidation();
-passwordInput.CustomValidation.validityChecks = passwordValidityChecks;
+phoneInput.CustomValidation = new CustomValidation();
+phoneInput.CustomValidation.validityChecks = passwordValidityChecks;
 
-passwordRepeatInput.CustomValidation = new CustomValidation();
-passwordRepeatInput.CustomValidation.validityChecks = passwordRepeatValidityChecks;
 
 let inputs = document.querySelectorAll('input:not([type=\'submit\'])');
 for ( let i = 0; i < inputs.length; i++ ) {

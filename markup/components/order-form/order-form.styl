@@ -8,7 +8,9 @@
 		align-items center
 	&__form-group
 		position relative
-		margin-bottom 50px
+		margin-bottom 30px
+		&:first-child
+			margin-bottom 10px
 		label
 			display inline-block
 			position absolute
@@ -36,6 +38,9 @@
 			transition outline .4s ease
 			&.field-active
 				outline 1px solid rgba(255,255,255,.3)
+			&:focus + .requirements
+				max-height 100%
+				opacity 1
 	&__submit
 		display block
 		width 200px
@@ -49,4 +54,17 @@
 		border none
 		box-shadow 0 3px 6px rgba(0, 0, 0, 0.25)
 .requirements
-	display none	
+	padding-top 10px
+	list-style-type:circle;
+	list-style-position inside
+	text-align left
+	font-size 14px
+	opacity 0
+	transition max-height .5s ease, opacity .8s ease
+	&__item
+		color rgba(255,255,255,.7)
+		&_valid
+			color green
+		&_invalid
+			color red
+	
