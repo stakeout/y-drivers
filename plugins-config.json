@@ -110,7 +110,7 @@
     // This config can be overrided by user-tasks/html/helpers/modify-options
     "gulp-html-prettify": {
         "indent_char": " ",
-        "indent_size": 4,
+        "indent_size": 2,
         "indent_inner_html": true
     },
 

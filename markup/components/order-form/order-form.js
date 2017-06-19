@@ -47,10 +47,10 @@ let usernameValidityChecks = [
     },
     {
         isInvalid: function (input) {
-            let illegalCharacters = input.value.match(/[^а-яА-Яa-zA-Z]/);
+            let illegalCharacters = !input.value.match(/^[а-яА-Яa-zA-Z\s]+$/);
             return illegalCharacters ? true : false;
         },
-        invalidityMessage: 'Пишем только буквы',
+        invalidityMessage: 'Пишем только буквы и пробел',
         element: document.querySelector('#username + .requirements li:nth-child(2)')
     }
 ];
@@ -58,16 +58,9 @@ let usernameValidityChecks = [
 let passwordValidityChecks = [
     {
         isInvalid: function (input) {
-            return input.value.length < 16;
+            return !input.value.match(/\+7\s[0-9]{3}\s[0-9]{7}/);
         },
-        invalidityMessage: 'This input needs to be between 8 and 100 characters',
-        element: document.querySelector('label[for=\'password\'] li:nth-child(1)')
-    },
-    {
-        isInvalid: function (input) {
-            return !input.value.match(/\+7\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/g);
-        },
-        invalidityMessage: 'Напишите номер в формате +7 (xxx) xxx-xx-xx',
+        invalidityMessage: 'Напишите номер в формате +7 xxx xxxxxxx (2 пробела)',
         element: document.querySelector('#phone + .requirements li:nth-child(1)')
     }
 ];

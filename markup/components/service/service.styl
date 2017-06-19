@@ -9,9 +9,19 @@
 		flex-wrap wrap
 		justify-content space-around
 	&__item
+		position relative
 		flex-basis 300px
 		padding-top 100px
 		text-align center
+		&:not(:last-child):after
+			position absolute
+			content ''
+			right -50px
+			top calc(50% - 20px)
+			width 50px
+			height 40px
+			background-image url(%=static=%minified-svg/arrow.svg)
+			background-repeat no-repeat
 		b
 			display block
 			margin-bottom 20px
