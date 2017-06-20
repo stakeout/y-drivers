@@ -10,7 +10,8 @@
     "jade-injected": "^1.0.2",
     "jquery": "^3.2.1",
     "page-scroll-to-id": "^1.5.8",
-    "smart-grid": "^1.0.0"
+    "smart-grid": "^1.0.0",
+    "sweetalert2": "^6.6.5"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
