@@ -1,7 +1,11 @@
 .questions
 	padding-top 80px
+	+tablet()
+		padding-top 50px
 	&__title
 		margin-bottom 80px
+		+tablet()
+			margin-bottom 50px
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -15,6 +19,9 @@
 		box-shadow 0 3px 6px rgba(0, 0, 0, 0.25)
 		+netbook()
 			flex-basis 470px
+		+tablet()
+			flex-basis 100%
+			margin-bottom 20px
 	&__question,
 	&__answer
 		display block
@@ -23,6 +30,8 @@
 		font-size 14px
 		font-weight 300
 		line-height 21px
+		+tablet()
+			padding 10px
 	&__question
 		background-color $c_orange
 		

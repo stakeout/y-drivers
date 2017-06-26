@@ -1,7 +1,10 @@
 .service
 	padding-top 80px
+	+tablet()
+		padding-top 50px
 	&__title
 		margin-bottom 80px
+		margin-bottom 50px
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -22,6 +25,13 @@
 			height 40px
 			background-image url(%=static=%minified-svg/arrow.svg)
 			background-repeat no-repeat
+			+tablet()
+				width 40px
+				height 30px
+				right -10px
+		+tablet()
+			flex-basis 245px
+			
 		b
 			display block
 			margin-bottom 20px

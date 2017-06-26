@@ -18,5 +18,7 @@ $(() => {
         const form = $('#promo').attr('id');
         $.mPageScroll2id('scrollTo', form);
     });
-
+    $('.page-header__nav-btn').on('click', function () {
+        $('.page-header__nav-btn .bar').toggleClass('animate');
+    });
 });

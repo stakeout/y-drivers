@@ -1,5 +1,7 @@
 .recruitment-info
 	padding-top 80px
+	+tablet()
+		padding-top 50px
 	&__inner
 		display -webkit-flex
 		display -ms-flex
@@ -13,6 +15,9 @@
 			font-size 36px
 			font-weight 100
 			line-height 60px
+			+netbook()
+				text-align center
+				
 	&__button
 		width 200px
 		height 50px
@@ -25,11 +30,16 @@
 		box-shadow 0 3px 6px rgba(0, 0, 0, 0.25)
 		border none
 		transition all .5s ease
+		+netbook()
+			display block
+			margin 0 auto
 		&:hover
 			background-color darken($c_orange, 20%)
 	&__right-col
 		flex-basis 50%
 		padding-left 50px
+		+tablet()
+			padding-left 30px
 		p
 			margin-bottom 20px
 			color $c_black

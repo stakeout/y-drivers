@@ -2,7 +2,9 @@
 	display -webkit-flex
 	display -ms-flex
 	display flex
-	flew-wrap wrap
+	flex-wrap wrap
+	+mobile-lg()
+		display none
 	&__item
 		display block
 		margin-right 35px
