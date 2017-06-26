@@ -7,11 +7,13 @@
 		display -ms-flex
 		display flex
 		flex-wrap wrap
-		justify-content space-around
+		// justify-content space-around
 	&__item
 		flex-basis 200px
 		padding-top 100px
 		text-align center
+		+netbook()
+			flex-basis 190px
 		b
 			display block
 			margin-bottom 20px

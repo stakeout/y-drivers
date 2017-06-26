@@ -8,5 +8,15 @@ $(() => {
     $('.navigation a, .logo a').mPageScroll2id({
         highlightSelector: '.navigation a'
     });
+    /* demo functions */
+    $('button[rel=\'next\']').click(function (e) {
+        e.preventDefault();
+        let to = $(this).parent().parent('section').next().attr('id');
+        $.mPageScroll2id('scrollTo', to);
+    });
+    $('button[type=button]').click(function () {
+        const form = $('#promo').attr('id');
+        $.mPageScroll2id('scrollTo', form);
+    });
 
 });

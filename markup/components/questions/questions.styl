@@ -9,10 +9,12 @@
 		flex-wrap wrap
 		justify-content: space-between;
 	&__item
-		flex 0 1 545px
+		flex-basis 540px
 		margin-bottom 50px
 		border-radius 5px
 		box-shadow 0 3px 6px rgba(0, 0, 0, 0.25)
+		+netbook()
+			flex-basis 470px
 	&__question,
 	&__answer
 		display block
