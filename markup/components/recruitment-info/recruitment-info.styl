@@ -7,8 +7,12 @@
 		display -ms-flex
 		display flex
 		flex-wrap wrap
+		+mobile-sm()
+			flex-direction column
 	&__left-col
 		flex-basis 50%
+		+mobile-sm()
+			margin-bottom 15px
 		h2
 			margin-bottom 60px
 			color $c_black
@@ -20,6 +24,9 @@
 			+mobile-lg()
 				font-size 30px
 				line-height 1.2
+			+mobile-sm()
+				font-size 24px
+				margin-bottom 30px
 	&__button
 		width 200px
 		height 50px
@@ -42,6 +49,8 @@
 		padding-left 50px
 		+tablet()
 			padding-left 30px
+		+mobile-sm()
+			padding-left 0
 		p
 			margin-bottom 20px
 			color $c_black

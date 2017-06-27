@@ -14,13 +14,17 @@
 		justify-content:space-between;
 		+tablet()
 			justify-content:space-around;
-			
+		+mobile-sm()
+			justify-content center
+				
 	&__item
 		flex-basis 215px
 		text-align center
 		+tablet()
 			flex-basis 45%
 			margin-bottom 40px
+		+mobile-sm()
+			flex-basis 80%
 	&__info-wrap
 		padding 50px 25px
 		margin-bottom 60px

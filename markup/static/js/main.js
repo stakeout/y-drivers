@@ -18,8 +18,8 @@ $(() => {
         const form = $('#promo').attr('id');
         $.mPageScroll2id('scrollTo', form);
     });
-    $('.page-header__nav-btn').on('click', function () {
-        $('.page-header__nav-btn .bar').toggleClass('animate');
+    $('.nav-btn').on('click', function () {
+        $('.nav-btn .bar').toggleClass('animate');
         $('.navigation').slideToggle(300);
     });
 });

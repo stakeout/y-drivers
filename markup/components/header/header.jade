@@ -1,12 +1,11 @@
 include ../logo/logo
 include ../navigation/navigation
 include ../phone/phone
+include ../hamburger/hamburger
 mixin header(data)
 	+b.HEADER(class='page-header')
 		+e.inner.center
 			+logo
 			+navigation
 			+phone
-			+e.BUTTON.nav-btn.no-js(type=button) Menu
-				span.bar
-				
+			+hamburger
