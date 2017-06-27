@@ -8,9 +8,12 @@
 		align-items center
 	&__form-group
 		position relative
+		width 420px
 		margin-bottom 30px
 		&:first-child
 			margin-bottom 10px
+		+mobile()
+			width 320px
 		label
 			display inline-block
 			position absolute
@@ -28,7 +31,7 @@
 				color: $c_orange;
 		input
 			display block
-			width 420px
+			width 100%
 			padding 10px 15px
 			color $c_white
 			font-size 18px
