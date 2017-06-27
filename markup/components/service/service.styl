@@ -11,6 +11,8 @@
 		display flex
 		flex-wrap wrap
 		justify-content space-around
+		+mobile-lg()
+			justify-content space-between	
 	&__item
 		position relative
 		flex-basis 300px
@@ -29,9 +31,15 @@
 				width 40px
 				height 30px
 				right -10px
+			+mobile-lg()
+				width 20px
+				height 15px
+				right 0
 		+tablet()
 			flex-basis 245px
-			
+		+mobile-lg()
+			flex-basis 188px
+			padding-top 60px
 		b
 			display block
 			margin-bottom 20px
@@ -39,17 +47,24 @@
 			font-size 18px
 			font-weight 400
 			line-height 21px
+			+mobile-lg()
+				font-size 15px
+				margin-bottom 5px
 		p
 			color $c_black
 			font-size 14px
 			font-weight 300
 			line-height 21px
+			+mobile-lg()
+				font-size 13px
 		&_connection,
 		&_work,
 		&_programm
 			background-repeat no-repeat
 			background-size 60px
 			background-position center top
+			+mobile-lg()
+				background-size 45px
 		&_connection
 			background-image url(%=static=%minified-svg/2-1.svg)
 		&_work

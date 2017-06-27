@@ -13,6 +13,8 @@
 		flex-wrap wrap
 		justify-content: space-between;
 		align-items: center;
+		+mobile-lg()
+			position relative
 	&__nav-btn
 		font-size 0
 		border none
@@ -24,7 +26,7 @@
 			width: $bar-width
 			height: $bar-height
 			transform: translateY($bar-spacing)
-			background: rgba(0, 0, 0,.5)
+			background: $c_dark
 			transition: all 0ms 300ms
 			&:after,
 			&:before 
@@ -37,14 +39,14 @@
 				position: absolute
 				left: 0
 				bottom: $bar-spacing
-				background: rgba(0, 0, 0, .5)
+				background: $c_dark
 				transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
 			&:after 
 				content: ""
 				position: absolute
 				left: 0
 				top: $bar-spacing
-				background: rgba(0, 0, 0, .5)
+				background: $c_dark
 				transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
 			&.animate:after
 				top: 0

@@ -20,5 +20,6 @@ $(() => {
     });
     $('.page-header__nav-btn').on('click', function () {
         $('.page-header__nav-btn .bar').toggleClass('animate');
+        $('.navigation').slideToggle(300);
     });
 });

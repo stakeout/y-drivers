@@ -4,7 +4,19 @@
 	display flex
 	flex-wrap wrap
 	+mobile-lg()
+		position absolute
 		display none
+		top 100%
+		flex-direction column
+		width 100%
+		margin-left -5px
+		padding 10px 0
+		border-bottom 1px solid rgba(0,0,0,.5)
+		border-top 1px solid rgba(0,0,0,.5)
+		background-color $c_white
+		text-align center
+		&.active
+			display block
 	&__item
 		display block
 		margin-right 35px
@@ -17,6 +29,8 @@
 		transition border-bottom .4s ease
 		&:last-child
 			margin-right 0
+			+mobile-lg()
+				margin-right auto
 		&:hover
 			border-bottom 1px solid $c_black
 		&:active
@@ -25,3 +39,11 @@
 		&.mPS2id-highlight
 			border-bottom 1px solid $c_black
 			color: #000
+			+mobile-lg()
+				color $c_black
+				font-weight 700
+				border-bottom 1px solid transparent
+		+mobile-lg()
+			margin-right 0
+			padding 10px 0
+			font-size 16px
