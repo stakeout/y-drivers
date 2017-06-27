@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
  // message structure
   $to = 'novash@tut.by';
-  $url = 'https://rabota-v-yandex-taxi.com';
+  $url = 'https://rabota-v-yandex-taxi.moscow';
   $subject = 'Заявка с сайта Яндекс.Водителей';
   $headers = 'From: '. $name . '\r\n';
   $headers = 'MIME-Version: 1/0\r\n';
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  // $message .= '<img src="//css-tricks.com/examples/WebsiteChangeRequestForm/images/wcrf-header.png" alt="Website Change Request" />';
   $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
   $message .= "<tr style='background: #eee;'><td><strong>Имя:</strong> </td><td>" . $name . "</td></tr>";
-  $message .= "<tr><td><strong>Телефон:</strong> </td><td>" . $phone . "</td></tr>";
+  $message .= "<tr><td><strong>Телефон:</strong> </td><td>+7-" . $phone . "</td></tr>";
  // $message .= "<tr><td><strong>Type of Change:</strong> </td><td>" . strip_tags($_POST['typeOfChange']) . "</td></tr>";
  // $message .= "<tr><td><strong>Urgency:</strong> </td><td>" . strip_tags($_POST['urgency']) . "</td></tr>";
   $message .= "<tr><td><strong>Отправлено с сайта:</strong> </td><td>" . $url . "</td></tr>";

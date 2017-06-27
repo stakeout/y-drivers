@@ -9,7 +9,7 @@ mixin order-form(data)
 					+e.LI.item Пишем только буквы и пробел
 			+e.form-group
 				label(for='phone') Номер телефона
-				input(type='tel' name='phone' id='phone' max-length='12' pattern='\+7\s[0-9]{3}\s[0-9]{7}' required)
+				input(type='tel' name='phone' id='phone' max-length='12' value='+7' pattern='[0-9]{3}[0-9]{7}' required)
 				+b.UL.requirements
-					+e.LI.item Номер в формате +7 xxx xxxxxxx (2 пробела, без дефисов)
+					+e.LI.item Ваш код и номер в формате xxx xxxxxxx (без пробелов)
 			+e.INPUT.submit(type='submit') Подключиться

@@ -58,9 +58,9 @@ let usernameValidityChecks = [
 let passwordValidityChecks = [
     {
         isInvalid: function (input) {
-            return !input.value.match(/\+7\s[0-9]{3}\s[0-9]{7}/);
+            return !input.value.match(/[0-9]{3}[0-9]{7}/);
         },
-        invalidityMessage: 'Напишите номер в формате +7 xxx xxxxxxx (2 пробела)',
+        invalidityMessage: 'Напишите код и номер в формате xxx xxxxxxx (без пробелов)',
         element: document.querySelector('#phone + .requirements li:nth-child(1)')
     }
 ];
