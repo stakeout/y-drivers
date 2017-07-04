@@ -6,37 +6,61 @@
 	background-position center 75px
 	background-size cover
 	&__inner
-		text-align center
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		align-items: center;
+		justify-content: space-around;
+		min-height 90vh
+		padding 50px 0
 	&__title
 		max-width 700px
-		margin 0 auto
-		padding-top 50px
-		padding-bottom 70px
+		// margin 0 auto 20px
 		font-size 36px
 		line-height 60px
 		font-weight 300
 		color $c_white
 		+mobile-lg()
-			font-size 30px
 			line-height 1.5
 		+mobile()
+			font-size 34px
 			line-height 1.2
 		+mobile-sm()
-			font-size 24px
+			font-size 28px
+			line-height 2
+	&__sub-title
+		color $c_white
+		font-size 20px
+		margin-bottom 170px
+		+mobile-lg()
+			text-align center
+			margin-bottom 110px
+		+mobile-sm()
+			margin-bottom 60px
+			font-size 18px
+			line-height 1.6
+		strong
+			font-weight 300
+		span
+			color $c_orange
+			font-size 22px
+			font-weight 700
 	&__text
 		width 300px
-		margin 0 auto 100px
 		color $c_white
 		font-size 12px
 		line-height 21px
 		font-weight 300
 		opacity .6
+		text-align center
 		+mobile-lg()
 			margin-bottom 50px
 	&__arrow-down
 		position relative
+		display block
 		margin-top auto
-		margin-bottom 100px
+		// margin-bottom 100px
 		border none
 		background-color transparent
 		opacity .5

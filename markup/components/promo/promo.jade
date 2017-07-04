@@ -2,7 +2,10 @@ include ../order-form/order-form
 mixin promo(data)
 	+b.SECTION.promo#promo
 		+e.inner.center
-			+e.H1.title Подключение к Яндекс-Такси водителем за 2% в Москве - за 2 минуты
+			+e.H1.title Работа в Яндекс такси.
+			+e.P.sub-title 
+				strong Подключение за 30 минут и всего за 
+					span 2%
 			+order-form
 			+e.P.text Оставьте Ваши данные и мы перезвоним с дальнейшими инструкциями.
 			+e.BUTTON(rel='next').arrow-down

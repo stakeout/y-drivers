@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    die(); // умирaeм
  }
  // message structure
-  $to = 'novash@tut.by';
-  $url = 'https://rabota-v-yandex-taxi.moscow';
+  $to = 'novash@tut.by, Ermakovigor_@mail.ru';
+  $url = 'http://работа-в-яндекс-такси.москва';
   $subject = 'Заявка с сайта Яндекс.Водителей';
   $headers = 'From: '. $name . '\r\n';
   $headers = 'MIME-Version: 1/0\r\n';

@@ -10,6 +10,11 @@
 		+mobile-lg()
 			flex-direction column
 	&__left-col
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		align-items center
 		flex-basis 50%
 		+mobile-lg()
 			margin-bottom 20px
@@ -19,6 +24,7 @@
 			font-size 36px
 			font-weight 100
 			line-height 60px
+			text-align center
 			+netbook()
 				text-align center
 			+mobile-lg()
@@ -51,6 +57,10 @@
 			padding-left 30px
 		+mobile-lg()
 			padding-left 0
+	&__info-col
+		flex-basis 100%
+	&__right-col,
+	&__info-col
 		p
 			margin-bottom 20px
 			color $c_black
@@ -58,3 +68,8 @@
 			line-height 21px
 			&:last-child
 				margin-bottom 0
+		h3
+			margin-bottom 10px
+			font-weight 500
+		li:not(:last-child)
+			margin-bottom 10px
