@@ -5,6 +5,14 @@ head
 	meta(content="telephone=no", name="format-detection")
 	//- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
 	meta(name="HandheldFriendly", content="true")
+	// Google Tag Manager
+	script.
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-N5RKWG7');
+	// End Google Tag Manager
 	link(href='https://fonts.googleapis.com/css?family=Roboto:100,300,400&subset=cyrillic', rel='stylesheet')
 	|<!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
 	|<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
